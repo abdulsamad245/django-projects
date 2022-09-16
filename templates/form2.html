@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block title %}My Form2{% endblock %}
+{% block content %}
+
+<div>
+    {% if success == True %}
+    
+   <strong>
+        {{successmsg}}
+    </strong> 
+    {% endif %}
+</div>
+
+<div>
+    {% if error == True %}
+    {% for error in errors %}
+
+    <strong>
+        {{error}}{{","}}
+    </strong>
+    {% endfor %}
+    
+    {% comment %} <strong>
+        {{successmsg}}
+    </strong> {% endcomment %}
+    {% endif %}
+</div>
+<form method="POST">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="submit" id="submit" value="Submit">
+    {% comment %} {{form.as_ul}} {% endcomment %}
+</form>
+
+
+
+
+{% endblock %}

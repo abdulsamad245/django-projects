@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %}My Image Page{% endblock %}
+{% block content %}
+{% comment %} <h1>Image Page</h1> {% endcomment %}
+{% load static %}
+<div>
+    <img src="{% static 'images/employee.png' %}" alt="error">
+</div>
+
+
+
+
+
+{% endblock %}

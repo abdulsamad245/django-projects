@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}My Image Page{% endblock %}
+{% block content %}
+{% comment %} <h1>Image Page</h1> {% endcomment %}
+<form action="{% url 'submitform' %}" method="post">
+    {% csrf_token %}
+    <label for="name">Name</label><br>
+    <input type="text" name="name" id="name"><br><br>
+
+    <label for="textarea">TextArea</label><br>
+    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea><br>
+
+    <input type="submit" name="submit" id="submit" value="Submit">
+</form>
+
+
+
+
+{% endblock %}

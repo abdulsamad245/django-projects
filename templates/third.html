@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block title %}My Third Page{% endblock %}
+{% block content %}
+<h1>Thirdpage</h1>
+<h1>{{var}}</h1>
+<h1>{{msg}}</h1>
+<ul>
+    {%for eachfruit in fruits %}
+    <li>{{eachfruit}}</li>
+    {% endfor %}
+    {% if ans %}
+    <h1>{{var}}</h1>
+    {% else %}
+    <h1>{{fruits}}</h1>
+    {% endif %}
+
+
+
+
+{% endblock %}
